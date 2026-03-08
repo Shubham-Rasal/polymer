@@ -1,0 +1,23 @@
+[package]
+name = "simple-bot"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+polymarket-client-sdk = { version = "0.4", features = ["clob", "gamma", "ctf", "tracing", "rtds", "ws"] }
+alloy = { version = "1.6", features = ["signers", "signer-local", "providers", "provider-http", "contract", "sol-types", "network"] }
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "registry"] }
+clap = { version = "4", features = ["derive"] }
+rust_decimal = { version = "1", features = ["serde"] }
+rust_decimal_macros = "1"
+chrono = "0.4"
+futures = "0.3"
+dashmap = "5"
+dotenvy = "0.15"
+rustls = { version = "0.23", features = ["ring"] }
+reqwest = { version = "0.12", features = ["json", "rustls-tls"] }
